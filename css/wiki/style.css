@@ -1,4 +1,4 @@
-header{
+/* header{
   width: 42%;
   margin: 0 auto;
 }
@@ -35,4 +35,16 @@ h2, h3{
   color: black;
 
 }
+ */
 
+ .flex-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin:0;
+ }
+
+ .header-h1, main {
+  width: 960px;
+ }
