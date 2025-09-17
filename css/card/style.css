@@ -1,36 +1,36 @@
-.card-container{
+.card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: lightgray;
-  width:300px;
-  padding:16px;
+  width: 300px;
+  padding: 16px;
   margin: 0 auto;
 }
 
-.card{
+.card {
   background-color: white;
   height: 300px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
-h1,p{
-  margin:0;
+h1,
+p {
+  margin: 0;
 }
-.card-header{
-  margin:0;
-}
-
-.card-body{
-  margin:0;
+.card-header {
+  margin: 0;
 }
 
-.card-footer{
-  margin:0;
+.card-body {
+  margin: 0;
+}
+
+.card-footer {
+  margin: 0;
   display: flex;
   flex-direction: row;
 }
