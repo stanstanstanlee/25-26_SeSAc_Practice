@@ -45,6 +45,8 @@ header {
   font: inherit;
   background-color: yellow;
   padding: 8px;
+  height: 2rem;
+  width: 5rem;
 }
 
 .nav-menu {
@@ -94,18 +96,18 @@ header {
   flex-direction: row;
   /* 주축 : 행(row) */
   /* 교차축 : 열(column) */
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 main {
   display: flex;
-  height: 85vh;
+  height: 90vh;
 }
 
-.sidebar {
+.side {
   width: 15%;
   background-color: rgb(248, 248, 248);
 }
-.article {
+.main-center {
   flex-grow: 1;
 }
