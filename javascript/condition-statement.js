@@ -275,6 +275,7 @@ if (temperature < 25) {
 
 // TODO: 조건부 변수 할당 실습
 // 변수 purchaseAmount에 150000을 할당한다
+// 변수 finalPrice를 선언한다
 // purchaseAmount가 100000 이상이면 10% 할인된 금액을, 아니면 원래 금액을 finalPrice에 할당한다
 // "구매 금액: "과 변수 purchaseAmount를 템플릿 리터럴을 활용해서 출력한다
 // "최종 금액: "과 변수 finalPrice를 템플릿 리터럴을 활용해서 출력한다
@@ -285,7 +286,12 @@ if (temperature < 25) {
 */
 
 let purchaseAmount = 150000;
-
+let finalPrice;
+if (purchaseAmount > 10000) {
+  finalPrice = purchaseAmount * 0.9;
+}
+console.log(`구매 금액: ${purchaseAmount}`);
+console.log(`최종 금액: ${finalPrice}`);
 // TODO: 다중 조건 확인 실습
 // 변수 userAge는 22, 변수 hasLicense는 true, 변수 hasInsurance는 false로 할당한다
 // userAge가 21 이상이고 hasLicense가 true이고 hasInsurance가 true이면 "완벽한 운전자"를 출력한다
@@ -346,3 +352,17 @@ if (!isActive) {
 /* 출력 결과
 음료수만 가능
 */
+
+let drinkType = "coffee";
+let userAge2 = 16;
+let isDecaf = false;
+
+if (drinkType === "coffee" && userAge2 >= 18) {
+  console.log("커피 주문 가능");
+} else if (drinkType === "coffee" && userAge2 < 18 && isDecaf) {
+  console.log("디카페인 커피 가능");
+} else if (drinkType === "tea") {
+  console.log("차 주문 가능");
+} else {
+  console.log("음료수만 가능");
+}
