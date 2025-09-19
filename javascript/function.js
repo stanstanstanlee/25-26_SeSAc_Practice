@@ -146,23 +146,21 @@ console.log("=========================================");
 
 // 함수 선언식 정의 코드
 function max(data1, data2) {
-  let bigger;
-
-  if (data1 > data2) {
-    bigger = data1;
-  } else bigger = data2;
-
-  return bigger;
+  // let bigger;
+  // if (data1 > data2) {
+  //   bigger = data1;
+  // } else bigger = data2;
+  // return bigger;
+  return data1 > data2 ? data1 : data2;
 }
 // 화살표 함수 정의 코드
 const maxArrow = (data1, data2) => {
-  let bigger;
-
-  if (data1 > data2) {
-    bigger = data1;
-  } else bigger = data2;
-
-  return bigger;
+  // let bigger;
+  // if (data1 > data2) {
+  //   bigger = data1;
+  // } else bigger = data2;
+  // return bigger;
+  return data1 > data2 ? data1 : data2;
 };
 // 함수 호출 코드
 let result7 = max(5, 10);
