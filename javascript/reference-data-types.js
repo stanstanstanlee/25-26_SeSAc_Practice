@@ -165,8 +165,14 @@ console.log("============================================");
 // // 변수 book에 title: "책 제목", author: "작가명" 속성을 가진 객체를 할당하고 출력한다
 // // book의 title을 출력한다
 // // book의 author를 출력한다
-let book = { title: "책 제목", author: "작가명" };
+let book = {
+  title: "책 제목",
+  author: "작가명",
+};
 console.log(book);
+console.log(book.title);
+console.log(book.author);
+
 // /* 출력 결과
 // { title: '책 제목', author: '작가명' }
 // 책 제목
@@ -174,84 +180,129 @@ console.log(book);
 // */
 
 console.log("============================================");
-// // TODO: 객체 기초 - 다중 속성 객체 다루기
-// // 변수 person에 name: "김철수", age: 25, job: "학생" 속성을 가진 객체를 할당하고 출력한다
-// // person 객체의 name, age, job 속성을 각각 출력한다
+// TODO: 객체 기초 - 다중 속성 객체 다루기
+// 변수 person에 name: "김철수", age: 25, job: "학생" 속성을 가진 객체를 할당하고 출력한다
+// person 객체의 name, age, job 속성을 각각 출력한다
+let person = {
+  name: "김철수",
+  age: 25,
+  job: "학생",
+};
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+console.log(person.job);
+/* 출력 결과
+{ name: '김철수', age: 25, job: '학생' }
+김철수
+25
+학생
+*/
 
-// /* 출력 결과
-// { name: '김철수', age: 25, job: '학생' }
-// 김철수
-// 25
-// 학생
-// */
+console.log("============================================");
+// TODO: 객체 기초 - 속성 값 수정과 추가
+// 변수 product에 name: "컴퓨터", price: 1000000을 담은 객체를 할당하고 출력한다
+// price를 1200000으로 변경하고 객체를 출력한다
+// brand: "삼성" 속성을 추가하고 객체를 출력한다
+let product = {
+  name: "컴퓨터",
+  price: 1000000,
+};
+console.log(product);
+product.price = 1200000;
+console.log(product);
+product.brand = "삼성";
+console.log(product);
+/* 출력 결과
+{ name: '컴퓨터', price: 1000000 }
+{ name: '컴퓨터', price: 1200000 }
+{ name: '컴퓨터', price: 1200000, brand: '삼성' }
+*/
+console.log("============================================");
+// TODO: 객체 조작 - 복수 속성 수정과 추가
+// 변수 user에 name: "박영희", age: 28 속성을 가진 객체를 할당하고 출력한다
+// user 객체의 age를 30으로 수정하고, job: "개발자" 속성을 추가한 후 객체를 출력한다
+// address: "서울" 속성을 추가하고 최종 객체를 출력한다
+let user = {
+  name: "박영희",
+  age: 28,
+};
+console.log(user);
+user.age = 30;
+user["job"] = "개발자";
+console.log(user);
+user["address"] = "서울";
+console.log(user);
 
-// // TODO: 객체 기초 - 속성 값 수정과 추가
-// // 변수 product에 name: "컴퓨터", price: 1000000을 담은 객체를 할당하고 출력한다
-// // price를 1200000으로 변경하고 객체를 출력한다
-// // brand: "삼성" 속성을 추가하고 객체를 출력한다
+/* 출력 결과
+{ name: '박영희', age: 28 }
+{ name: '박영희', age: 30, job: '개발자' }
+{ name: '박영희', age: 30, job: '개발자', address: '서울' }
+*/
 
-// /* 출력 결과
-// { name: '컴퓨터', price: 1000000 }
-// { name: '컴퓨터', price: 1200000 }
-// { name: '컴퓨터', price: 1200000, brand: '삼성' }
-// */
+console.log("============================================");
+// TODO: 객체 조작 - Object 메서드와 속성 제거
+// 변수 person에 name: "이민수", age: 35, city: "부산" 속성을 가진 객체를 할당한다
+// 객체의 모든 키를 배열로 출력한다
+// 객체의 모든 값을 배열로 출력한다
+// 객체의 모든 [키, 값] 쌍을 배열로 출력한다
+let person2 = { name: "이민수", age: 35, city: "부산" };
+console.log(Object.keys(person2));
+console.log(Object.values(person2));
+console.log(Object.entries(person2));
+/* 출력 결과
+['name', 'age', 'city']
+['이민수', 35, '부산']
+[['name', '이민수'], ['age', 35], ['city', '부산']]
+*/
+console.log("============================================");
+// TODO: 배열과 객체 혼합 1
+// 변수 student에 name: "학생", grades: ["A", "B", "C"] 속성을 가진 객체를 할당하고 출력한다
+// student 객체의 grades 속성에 "D"를 추가하고 객체 student를 출력한다
+let student = { name: "학생", grades: ["A", "B", "C"] };
+console.log(student);
+student.grades.push("D");
+console.log(student);
+/* 출력 결과
+{ name: "학생", grades: ["A", "B", "C"] }
+{ name: "학생", grades: ["A", "B", "C", "D"] }
+*/
+console.log("============================================");
+// TODO: 배열과 객체 혼합 2
+// 아래 변수 memoList에서 isDone이 false인 메모들만 출력한다
+// 반복문과 조건문을 활용한다
+const memoList = [
+  { content: "오늘 할 일", isDone: false },
+  { content: "오늘 할 일 2", isDone: true },
+  { content: "오늘 할 일 3", isDone: false },
+];
+for (let i = 0; i < memoList.length; i++) {
+  if (memoList[i].isDone === false) {
+    console.log(memoList[i]);
+  }
+}
+/*
+{ content: "오늘 할 일", isDone: false }
+{ content: "오늘 할 일 3", isDone: false }
+*/
+console.log("============================================");
+// TODO: 배열과 객체 혼합 3
+// 아래 변수 userList에서 age가 짝수인 속성의 name을 출력한다
+// 반복문과 조건문을 활용한다
+const userList = [
+  { name: "김철수", age: 20 },
+  { name: "이순신", age: 23 },
+  { name: "장영실", age: 24 },
+  { name: "홍길동", age: 25 },
+];
 
-// // TODO: 객체 조작 - 복수 속성 수정과 추가
-// // 변수 user에 name: "박영희", age: 28 속성을 가진 객체를 할당하고 출력한다
-// // user 객체의 age를 30으로 수정하고, job: "개발자" 속성을 추가한 후 객체를 출력한다
-// // address: "서울" 속성을 추가하고 최종 객체를 출력한다
+for (let v of userList) {
+  if (v.age % 2 === 0) {
+    console.log(v.name);
+  }
+}
 
-// /* 출력 결과
-// { name: '박영희', age: 28 }
-// { name: '박영희', age: 30, job: '개발자' }
-// { name: '박영희', age: 30, job: '개발자', address: '서울' }
-// */
-
-// // TODO: 객체 조작 - Object 메서드와 속성 제거
-// // 변수 person에 name: "이민수", age: 35, city: "부산" 속성을 가진 객체를 할당한다
-// // 객체의 모든 키를 배열로 출력한다
-// // 객체의 모든 값을 배열로 출력한다
-// // 객체의 모든 [키, 값] 쌍을 배열로 출력한다
-
-// /* 출력 결과
-// ['name', 'age', 'city']
-// ['이민수', 35, '부산']
-// [['name', '이민수'], ['age', 35], ['city', '부산']]
-// */
-
-// // TODO: 배열과 객체 혼합 1
-// // 변수 student에 name: "학생", grades: ["A", "B", "C"] 속성을 가진 객체를 할당하고 출력한다
-// // student 객체의 grades 속성에 "D"를 추가하고 객체 student를 출력한다
-
-// /* 출력 결과
-// { name: "학생", grades: ["A", "B", "C"] }
-// { name: "학생", grades: ["A", "B", "C", "D"] }
-// */
-
-// // TODO: 배열과 객체 혼합 2
-// // 아래 변수 memoList에서 isDone이 false인 메모들만 출력한다
-// // 반복문과 조건문을 활용한다
-// const memoList = [
-//   { content: "오늘 할 일", isDone: false },
-//   { content: "오늘 할 일 2", isDone: true },
-//   { content: "오늘 할 일 3", isDone: false },
-// ];
-// /*
-// { content: "오늘 할 일", isDone: false }
-// { content: "오늘 할 일 3", isDone: false }
-// */
-
-// // TODO: 배열과 객체 혼합 3
-// // 아래 변수 userList에서 age가 짝수인 속성의 name을 출력한다
-// // 반복문과 조건문을 활용한다
-// const userList = [
-//   { name: "김철수", age: 20 },
-//   { name: "이순신", age: 23 },
-//   { name: "장영실", age: 24 },
-//   { name: "홍길동", age: 25 },
-// ];
-
-// /* 출력 결과
-// 김철수
-// 장영실
-// */
+/* 출력 결과
+김철수
+장영실
+*/
