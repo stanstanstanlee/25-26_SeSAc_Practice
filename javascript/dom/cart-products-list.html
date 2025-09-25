@@ -36,7 +36,6 @@
         // };
         // const res = await axios(config);
         const { data } = await axios.get(`${DOMAIN_NAME}/carts/${n}`);
-        // 아래 코드 작성
         const products = data["products"];
         console.log(data);
         console.log(products);
