@@ -35,6 +35,7 @@
 
       getQuoteButton.addEventListener("click", () => {
         async function getRandomQuote() {
+          W;
           const { data } = await axios.get(`${DOMAIN_NAME}/quotes/random`);
           const quote = data["quote"];
           console.log(quote);
