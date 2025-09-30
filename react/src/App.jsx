@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Main from "./components/Main";
 import ProductContainer from "./components/ProductCard/ProductContainer";
 import StringState from "./components/State/StringState";
+import NumberState from "./components/State/NumberState";
+import ObjectState from "./components/State/ObjectState";
 ProductContainer;
 export default function App() {
   return (
@@ -12,6 +14,8 @@ export default function App() {
       {/* <Main /> */}
       {/* <Footer /> */}
       <StringState />
+      <NumberState />
+      <ObjectState />
     </div>
   );
 }
