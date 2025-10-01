@@ -6,6 +6,7 @@ import ProductContainer from "./components/ProductCard/ProductContainer";
 import StringState from "./components/State/StringState";
 import NumberState from "./components/State/NumberState";
 import ObjectState from "./components/State/ObjectState";
+import Form from "./components/Signup/Form";
 ProductContainer;
 export default function App() {
   return (
@@ -13,9 +14,10 @@ export default function App() {
       {/* <Header /> */}
       {/* <Main /> */}
       {/* <Footer /> */}
-      <StringState />
-      <NumberState />
-      <ObjectState />
+      {/* <StringState /> */}
+      {/* <NumberState /> */}
+      {/* <ObjectState /> */}
+      <Form />
     </div>
   );
 }
