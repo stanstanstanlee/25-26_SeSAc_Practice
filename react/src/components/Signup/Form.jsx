@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Form() {
   const [form, setForm] = useState({
     email: "",
-    pasword: "",
+    password: "",
     confirmPassword: "",
   });
   function handleChange(event) {
@@ -13,9 +13,26 @@ export default function Form() {
     const newForm = { ...form, [name]: value };
     setForm(newForm);
   }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (form["password"] !== form["confirmPassword"]) {
+      alert("비밀번호 불일치");
+      return;
+    }
+
+    fetch("https://httpbin.org/post", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
   return (
     <div>
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <label>이메일</label> <br></br>
         <input
           className="border-2"
@@ -36,6 +53,7 @@ export default function Form() {
           onChange={(event) => {
             handleChange(event);
           }}
+          required
         />
         <br></br>
         <label>비밀번호 확인</label> <br></br>
@@ -47,6 +65,7 @@ export default function Form() {
           onChange={(event) => {
             handleChange(event);
           }}
+          required
         />
         <br></br>
         <label>레벨</label>
