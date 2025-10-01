@@ -19,8 +19,9 @@ export default function Form() {
     // const { name, value } = target;
     const { name, value } = event["target"];
 
-    const newForm = { ...form, [name]: value };
-    setForm(newForm);
+    // const newForm = { ...form, [name]: value };
+    // setForm(newForm);
+    setForm({ ...form, [name]: value });
   }
 
   function handleSubmit(event) {
