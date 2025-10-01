@@ -7,6 +7,7 @@ import StringState from "./components/State/StringState";
 import NumberState from "./components/State/NumberState";
 import ObjectState from "./components/State/ObjectState";
 import Form from "./components/Signup/Form";
+import RecipeContainer from "./components/Recipe/RecipeContainer";
 ProductContainer;
 export default function App() {
   return (
@@ -17,7 +18,8 @@ export default function App() {
       {/* <StringState /> */}
       {/* <NumberState /> */}
       {/* <ObjectState /> */}
-      <Form />
+      {/* <Form /> */}
+      <RecipeContainer />
     </div>
   );
 }

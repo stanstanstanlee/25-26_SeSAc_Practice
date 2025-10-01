@@ -1,18 +1,25 @@
 import React from "react";
 import Recipe from "./Recipe";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-export default function Recipe() {
+export default function RecipeContainer() {
+  const [recipes, setRecipes] = useState([]);
+  useEffect(() => {
+    async function getRecipe() {
+      const { data } = await axios("https://dummyjson.com/recipes");
+      setRecipes(data["recipes"]);
+    }
+    getRecipe();
+  }, []);
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md border">
-      <img
-        className="w-full h-48 object-cover rounded-lg mb-4"
-        src="<https://via.placeholder.com/300x200>"
-        alt="레시피 이미지"
-      />
-      <h3 className="text-lg font-bold text-gray-800 mb-2">레시피 이름</h3>
-      <p className="text-gray-600 mb-2">요리 시간: 30분</p>
-      <p className="text-gray-600 mb-2">난이도: Easy</p>
-      <p className="text-gray-600">칼로리: 250kcal</p>
+    <div className="max-w-6xl mx-auto p-6">
+      <h2 className="text-3xl font-bold text-center mb-8">레시피 목록</h2>
+      <div className="flex flex-wrap gap-6 justify-center">
+        {recipes.map((recipe) => {
+          return <Recipe key={recipe["id"]} recipe={recipe}></Recipe>;
+        })}
+      </div>
     </div>
   );
 }
