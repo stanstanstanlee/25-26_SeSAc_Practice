@@ -9,7 +9,8 @@ import ObjectState from "./components/State/ObjectState";
 import Form from "./components/Signup/Form";
 import RecipeContainer from "./components/Recipe/RecipeContainer";
 import ProductContainer from "./components/ProductSort/ProductContainer";
-import Container from "./components/PostLimitSkip/Container";
+// import Container from "./components/PostLimitSkip/Container";
+import MovieSearch from "./components/TMDB/MovieSearch";
 ProductContainer;
 export default function App() {
   return (
@@ -23,7 +24,8 @@ export default function App() {
       {/* <Form /> */}
       {/* <RecipeContainer /> */}
       {/* <ProductContainer /> */}
-      <Container />
+      {/* <Container /> */}
+      <MovieSearch />
     </div>
   );
 }
