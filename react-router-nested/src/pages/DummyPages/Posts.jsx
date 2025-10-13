@@ -1,5 +1,5 @@
 import React from "react";
-import PostsList from "../components/PostsList";
+import PostsList from "../../components/PostsList";
 
 export default function Posts() {
   return (
@@ -9,4 +9,3 @@ export default function Posts() {
     </div>
   );
 }
-

@@ -1,5 +1,5 @@
 import React from "react";
-import CartsList from "../components/CartsList";
+import CartsList from "../../components/CartsList";
 
 export default function Carts() {
   return (
@@ -9,4 +9,3 @@ export default function Carts() {
     </div>
   );
 }
-
