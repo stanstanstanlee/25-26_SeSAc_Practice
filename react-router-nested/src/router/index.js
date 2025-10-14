@@ -7,10 +7,11 @@ import RootLayout from "../layouts/RootLayout";
 import DummyLayout from "../layouts/DummyLayout";
 import PostDetail from "../pages/DummyPages/PostDetail";
 import ProductDetail from "../pages/DummyPages/ProductDetail";
+import PATHS from "../constants/paths"; //경로 상수
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: PATHS["ROOT"]["INDEX"],
     Component: RootLayout,
     children: [
       {
