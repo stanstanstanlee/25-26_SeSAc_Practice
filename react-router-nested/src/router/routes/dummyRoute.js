@@ -4,12 +4,11 @@ import Posts from "../../pages/DummyPages/Posts";
 import DummyLayout from "../../layouts/DummyLayout";
 import PostDetail from "../../pages/DummyPages/PostDetail";
 import PATHS from "../../constants/paths";
-import DummyLayout from "../../layouts/DummyLayout";
 import ProductDetail from "../../pages/DummyPages/ProductDetail";
 
 const dummyRoutes = [
   {
-    paths: PATHS.DUMMY.INDEX,
+    path: PATHS.DUMMY.INDEX,
     Component: DummyLayout,
     children: [
       {

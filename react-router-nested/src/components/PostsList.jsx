@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import PATHS from "../constants/paths";
 export default function PostsList() {
   const [posts, setPosts] = useState([]);
 
@@ -31,7 +32,7 @@ export default function PostsList() {
         //   <br />
         //   태그: {post.tags.join(", ")}
         // </li>
-        <Link to={`/dummy/posts/${post.id}`} className="block">
+        <Link to={PATHS.DUMMY.getPostDetail(post.id)} className="block">
           No. {post.id} - {post.title}
         </Link>
       ))}

@@ -23,7 +23,7 @@ export default function ProductsList() {
 
       {products.map((product) => (
         <Link
-          to={`dummy/products/${product.id}`}
+          to={`/dummy/products/${product.id}`}
           className="block border p-2 mb-2 rounded hover:bg-gray-100"
         >
           <div>id : {product.id}</div>
